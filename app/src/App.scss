@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+$black: #111111;
+$gray: #838383;
+$purple: #9E8AFF;
+$lightpurple: #D19FFF;
+
+/* Global Components */
+
+
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
+  .navlinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+    .navlink {
+      text-decoration: none;
+      font-size: 20px;
+      color: $gray;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .navlink.active {
+      color: $purple;
+    }
+  }
+
+  .navtitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    font-size: 28px;
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+}
+
+/* Quests */
+
+.quests {
+  margin: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  .questlist {
+    display: flex;
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 70vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-left: 2px solid $purple;
+    padding: 15px;
+    padding-right: 0px;
+
+    .subquest-textfield {
+      margin: 10px;
+      padding: 10px;
+      width: 220px;
+    }
+    
+    .subquest-header {
+      margin: 10px;
+
+    }
+
+    .line {
+      flex: 1;
+      height: 2px;
+      background: $purple;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .questlist-title {
+      display: flex;
+      flex-direction: row;
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .questlist-marker-row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 30px;
+
+    }
+
+    .questlist-description {
+      margin: 5px;
+    }
+
+    .questlist-complete {
+      color: white;
+      background: $purple;
+      transition: background 0.1s;
+      border-radius: 20px;
+      padding: 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .questlist-complete:hover {
+      background: $lightpurple;
+    }
+
+    .questlist-incomplete {
+      color: white;
+      background: lightgray;
+      border-radius: 20px;
+      padding: 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .quest {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 16px;
+      margin: 10px;
+
+      .quest-left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .quest-mark {
+        width: 30px;
+        height: 30px;
+        transition: transform 0.2s;
+      }
+
+      .quest-mark.leaf {
+        cursor: pointer;
+      }
+
+      .quest-mark.leaf:hover {
+        transform: scale(1.2);
+      }
+
+      .quest-name {
+        cursor: pointer;
+      }
+
+      img {
+        height: 24px;
+        width: 10px;
+      }
+
+    }
+  }
+
+}
+
+
+/* Search */
+
+.search {
+  margin: 30px;
+  width: 400px;
+
+  .quest {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .accept-button {
+      color: white;
+      background: $purple;
+      transition: background 0.1s;
+      border-radius: 20px;
+      padding: 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .accept-button:hover {
+      background: $lightpurple;
+    }
+
+    .accept-button.accepted {
+      color: white;
+      background: lightgray;
+      border-radius: 20px;
+      padding: 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+  }
+
+}
